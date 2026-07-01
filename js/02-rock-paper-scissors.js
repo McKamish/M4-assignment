@@ -62,6 +62,7 @@ function RPSGame(playerChoice, computerChoice) {
 computerRoll()
 
 //Calling the function created for the comparison/game. Used a switch statement for determining if the player choice is an invalid input. 
+//To note: requirements did not include restarting the program if user input was invalid, so I did not do that. It quits and must be restarted.
 
 switch (playerChoice) {
     case 'rock':
