@@ -1,4 +1,4 @@
-/* The basic Calculator
+/* The Basic Calculator
 
 In this part of the assignment you will build a simple calculator using the skills you’ve acquired in regards to functions. 
 You will ask the user for a number, a second number, and then finally ask them what kind of operation they want to perform, either add, subtract, multiply, or divide. 
@@ -20,24 +20,6 @@ You’ll have to add this functionality within a do while loop similarly how the
 */
 
 // ADD A FUNCTION CALLED CALCULATE
-
-/*
-function calculate(x,y,operation) {
-    if (operation === 'add') {
-        let result = x + y
-        alert(`${x} plus ${y} is ${result}`)
-    } else if (operation === 'subtract') {
-        let result = x - y
-        alert(`${x} minus ${y} is ${result}`)
-    } else if (operation === 'multiply') {
-        let result = x * y
-        alert(`${x} times ${y} is ${result}`)
-    } else if (operation === 'divide') {
-        let result = x / y
-        alert(`${x} divided by ${y} is ${result}`)
-    }
-}
-*/
 
 function calculate(x,y,operation) {
     switch (operation) {
@@ -62,21 +44,19 @@ function calculate(x,y,operation) {
     }
 }
 
-
-// COLLECT FIRST NUMBER FROM USER
-let firstNumber = Number(prompt('Pick a number: '))
-
-// COLLECT SECOND NUMBER FROM USER
-let secondNumber = Number(prompt('Pick a second number: '))
-
-// COLLECT OPERATION TO PERFORM (+,-,*,/) FROM USER
-
-let operator = prompt('Pick an operation (add, substract, multiply, or divide): ').toLowerCase()
-
-// CALL THE FUNCTION AND RETURN THE RESULT WITHIN AN ALERT
+let firstNumber
+let secondNumber
+let operator
 
 do {
+    // COLLECT FIRST NUMBER FROM USER
+    firstNumber = Number(prompt('Pick a number: '))
+    // COLLECT SECOND NUMBER FROM USER
+    secondNumber = Number(prompt('Pick a second number: '))
+    // COLLECT OPERATION TO PERFORM (+,-,*,/) FROM USER
+    operator = prompt('Pick an operation (add, substract, multiply, or divide): ').toLowerCase()
+    // CALL THE FUNCTION AND RETURN THE RESULT WITHIN AN ALERT
     calculate(firstNumber, secondNumber, operator)
-} while (operator == 'add' || operator == 'subtract' || operator == 'multiply' || operator == 'divide')
-
+} while (operator !== 'add' && operator !== 'subtract' && operator !== 'multiply' && operator !== 'divide')
+    // We were asked to catch if the user inputs an invalid operator; however, not to verify the numbers are valid.
 
